@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "commit": "git add . && git cz && git push",
     "dev": "npm run index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +12,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cz-conventional-changelog": "^3.3.0",
     "express": "^4.19.2",
     "nodemon": "^3.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "disableScopeLowerCase": false,
+      "disableSubjectLowerCase": false,
+      "maxHeaderWidth": 100,
+      "maxLineWidth": 100,
+      "defaultType": "",
+      "defaultScope": "",
+      "defaultSubject": "",
+      "defaultBody": "",
+      "defaultIssues": ""
+    }
   }
 }
